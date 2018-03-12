@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>周末班第一周代码</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>这是一个标题</h1>
+        <p>这是一个段落</p>
+        <a href="http://techaction.cn">这是一个链接</a>
+        <a href="http://techaction.cn/assets/action/web/images/logo.png" download="../2">下载Logo</a>
+        <a href="http://techaction.cn"target="_blank">艾氪森</a>
+        <a href="#anchor1">链接到第一小节</a>
+        <a id ="anchor1" style="position:absolute;left:0;top:2000px;">第一小节</a>
+        <a href="standardattributes.html">站内链接，相对路径</a>
+        <a href="http://techaction.cn">链接到同协议站外网址</a>
+        <a href="https://techaction.cn"> <img src="../1.png" width="720"height="360"alt="鹿"></a>
+        <a href="mailto:support@techaction.cn?subject=%E9%97%AE%E9%A2%98%E6%B1%82%E5%8A%A9">联系我们</a>
+        <a href="story1.html">
+            <h3>Bruce Lawson voted sexiest man on Earth</h3>
+            <p><img src="bruce.jpg" alt="gorgeous lovebundle. ">
+                A congress representing all the planet'...</p>
+            <p>Read more</p>
+        </a>
+        <hr>
+
+        <!-- 空白，空格，换行，横线 -->
+        <p>我是第一段</p>
+        <p>我是第二段</p>
+        <p>我是段落里第一行<br>我是段落里第二行</p>
+        <p>我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行我是一个很长的行</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;我前面有 4 个空格。&copy;</p>
+        <hr>
+
+        <!-- 格式化文本 -->
+        <b>这个文本是加粗的</b>
+        <br>
+        <strong>这个文本是加粗的</strong>
+        <br>
+        <em>这个文本是斜体的</em>
+        <br>
+        <i>这个文本是斜体的</i>
+        <br>	
+        <big>这个文本字体放大</big>
+        <br>
+        <small>这个文本是缩小的</small>
+        <br>
+        这个文本包含<sub>下标</sub>
+        <br>
+        这个文本包含<sup>上标</sup>
+        <br>
+        <del>我被删除了</del>
+        <br>
+        <ins>我有下划线</ins>
+        <br>	
+        这里用一个短的代码: <code>var x = y + 1;</code>
+        <hr>
+	
+	
+        <!-- 预格式化文本 -->
+        <pre>
+        此例演示如何使用 pre 标签
+        对空行和    空格
+        进行控制
+        </pre>
+        <hr>
+        <!--引用-->
+        <p>鲁迅说过：<q>这个我真没说过。</q></p>
+        <p>Here is a quote from WWF's website:</p>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 50 years, WWF has been protecting the future of nature. The worlds leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+        </blockquote>
+        <!--简单表格-->
+        <table>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <hr>
+	
+        <!--带边框表格-->
+        <table border="1">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <hr>
+	
+        <!--带单元格间距表格-->
+        <table border="1" cellspacing="0">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <hr>
+	
+        <!--带单元格内边距表格-->
+        <table border="1" cellpadding="10" >
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <hr>
+	
+        <!--带表头表格-->
+        <table border="1" >
+            <tr>
+                <th>编码</th>
+                <th>姓名</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+            </tr>
+        </table>
+        <hr>
+	
+        <!--跨行表格-->
+        <table border="1">
+            <tr>
+                <td colspan="2">1</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <hr>
+	
+        <!--跨列表格-->
+        <table border="1">
+            <tr>
+                <td rowspan="2">1</td>
+                <td>2</td>
+            </tr>
+            <tr>			
+                <td>4</td>
+            </tr>
+        </table>
+        <hr>
+	
+        <!--语义化的表格-->
+        <table border="1">
+		<caption>绩效表格</caption>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>数量</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>张三</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>总计</td>
+                    <td>50</td>
+                </tr>
+            </tfoot>
+        </table>
+	
+        <!--列控制-->
+        <table border="1">
+		<colgroup>
+			<col span="2" style="background-color:red">
+			<col style="background-color:yellow">
+		</colgroup>
+		<tr>
+			<th>ISBN</th>
+			<th>Title</th>
+			<th>Price</th>
+		</tr>
+		<tr>
+			<td>3476896</td>
+			<td>My first HTML</td>
+			<td>$53</td>
+		</tr>
+		<tr>
+			<td>5869207</td>
+			<td>My first CSS</td>
+			<td>$49</td>
+		</tr>
+        </table>
+        <hr>
+	
+	<!--无序列表-->
+        <ul>
+            <li>Coffee</li>
+            <li>Milk</li>
+        </ul>
+
+	<!--有序列表-->
+        <ol>
+            <li>Coffee</li>
+            <li>Milk</li>
+        </ol>
+	
+	<!--自定义列表-->
+        <dl>
+            <dt>Coffee</dt>
+            <dd>black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>white cold drink</dd>
+        </dl>
+	
+	<!--嵌套列表-->
+        <ul>
+            <li>Coffee</li>
+            <li>Tea
+                <ul>
+                    <li>Black tea</li>
+                    <li>Green tea
+                    <ul>
+                        <li>China</li>
+                        <li>Africa</li>
+                    </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Milk</li>
+	</ul>
+	<hr>
+	
+	<!--表单-->
+	<form action="/login" method="post" enctype="application/x-www-form-urlencoded">
+		<p>用户名：<input name="username" type="text" value=""></p>
+		<p>密&nbsp;&nbsp;&nbsp;码：<input name="password" type="password" value=""></p>
+		<p><input type="reset" value="重置"><input type="submit" value="登录"></p>
+	</form>
+	
+	<!--单选，多选-->
+	<form action="/register" method="post">
+		<p>性别：<label><input type="radio" name="sex" value="male">男</label>
+		<label><input type="radio" name="sex" value="female">女</label></p>
+		<p>爱好：<label><input type="checkbox" name="interest" value="reading">读书</label>
+		<label><input type="checkbox" name="interest" value="film">看电影</label></p>
+	</form>
+	
+	<!--下拉列表-->
+	<form action="">
+	<select name="cars">
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="fiat">Fiat</option>
+		<option value="audi">Audi</option>
+	</select>
+	</form>
+	<hr>
+	
+
+
+</body>
+</html>
