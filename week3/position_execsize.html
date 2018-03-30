@@ -1,0 +1,134 @@
+<idoctype html>
+<html>
+<head>
+    <title>position_execsize</title>
+    <meta charset="utf-8">
+    <style>
+        .absolute_test{
+            position:absolute;
+            background-color: rgb(17, 218, 253);
+        }
+        .absolute_test .in{
+            height: 100px;
+            width: 100px;
+            background: skyblue;
+            margin:50px 50px 50px 50px;
+        }
+        .absolute_test2{
+            padding:20px;
+            background-color: rgb(17, 218, 253);
+        }
+        .absolute_test2 .in{
+            background: skyblue;
+            position:absolute;
+        }
+        .absolute_test3{
+            background-color: yellowgreen;
+            height: 300px;
+            width: 300px 
+        }
+        .absolute_test3 .in{
+            height: 100px;
+            width: 100px;
+            float: right;
+            background-color: aqua;
+            position:absolute;
+        }
+        .absolute_test4{
+            position: relative;
+            background-color: yellow;
+            height: 300px;
+            width: 300px ;
+        }
+        .absolute_test4 .in{
+            background-color: rgb(0, 38, 255);
+            left: 10px;
+            right: 10px;
+            top: 10px;
+            bottom: 10px;
+            position: absolute;
+        }
+        .absolute_test5{
+            position: relative;
+            background-color: rgb(0, 255, 106);
+            height: 300px;
+            width: 300px ;
+            text-align: center;
+        }
+        .absolute_test5 .in{
+            background-color: rgb(0, 204, 255);
+            position: absolute;
+        }
+        .absolute_test6{
+            position: relative;
+            background-color: rgb(0, 255, 106);
+            height: 100px;
+            width: 100px ;
+            overflow: auto;
+        }
+        .absolute_test6 .in{
+            background-color: rgb(0, 204, 255);
+            height: 200px;
+            width: 200px ;
+            position: absolute;
+        }
+        .absolute_test7{
+            position: relative;
+            background-color: rgb(0, 255, 106);
+            height: 300px;
+            width: 300px ;
+        }
+        .absolute_test7 .out{
+            background-color: rgb(0, 204, 255);
+            height: 100px;
+            width: 200px ;
+            overflow: hidden;
+        }
+        .absolute_test7 .in{
+            background-color: rgb(0, 204, 255);
+            height: 200px;
+            width: 100px ;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>position</h2>
+    <h2>absolute 包裹性</h3>
+    <div class="absolute_test">
+        <div class="in"></div>
+    </div>
+    <hr style="margin-top: 300px;">
+    <h2>absolute 破坏性</h3>
+    <div class="absolute_test2">
+        <div class="in">安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊安保费静安寺都不放假啊</div>
+    </div>
+    <hr style="margin-top: 300px;">
+    <h2>absolute 去浮动</h3>
+    <div class="absolute_test3">
+        <div class="in"></div>
+    </div>
+    <hr style="margin-top: 300px;">
+    <h2>absolute 偏移特性</h3>
+    <div class="absolute_test4">
+        <div class="in"></div>
+    </div>
+    <hr style="margin-top: 300px;">
+    <h2>absolute 对居中行元素的影响</h3>
+    <div class="absolute_test5">
+        <span class="in">5555</span>
+    </div>
+    <hr style="margin-top: 300px;">
+    <h2>absolute 对overflow的影响</h3>
+    <div class="absolute_test6">
+        <div class="in">66666666666666666666666666666666666666666666666666666666666666666666666666</div>
+    </div>
+    <hr style="margin-top: 300px;">
+    <h2>absolute 对overflow的影响2</h3>
+    <div class="absolute_test7">
+        <div class="out">
+            <div class="in"></div>
+        </div>
+    </div>
+</body>
+</html>
