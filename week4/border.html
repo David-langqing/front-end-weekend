@@ -1,0 +1,68 @@
+<idoctype html>
+    <html>
+        <head>
+            <title>border</title>
+            <meta charset="utf-8">
+            <style>
+                .test1{
+                    height: 300px;
+                    width: 300px;
+                    background-color: skyblue;
+                    border:10px solid red;
+                    border-bottom-color: yellowgreen;
+                }
+                .test2{
+                    width: 400px;
+                    overflow: hidden;
+                }
+                .test2 .a{
+                    width: 200px;
+                    height:200px;
+                    background-color: aqua;
+                    float: left;
+
+                }
+                .test2 .b{
+                    width: 200px;
+                    height: 200px;
+                    background-color: rgb(255, 94, 0);
+                    float: left;
+                }
+                .test3 .input{
+                    outline: 10px solid rgb(17, 0, 255);
+                }
+                .test4{
+                    border:1px solid red;
+                    width: 100%;
+                    height: 200px;
+                    border-collapse: collapse;
+                }
+                .test4 td{
+                    padding:20px;
+                    background-color: lightblue;
+                    border:1px solid skyblue;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="test1"></div>
+            <hr>
+            <div class="test2">
+                <div class="a"></div><div class="b"></div>
+            </div>
+            <hr>
+            <div class="test2">
+                    <input type="text">
+            </div>
+            <hr>
+            <input type="text"><input type="submit">
+            <hr>
+            <table class="test4">
+                <tr>
+                    <td>33</td>
+                    <td>33</td> 
+                </tr>
+            </table>
+        </body>
+    </html>
+</idoctype>

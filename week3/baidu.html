@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>baidu practice</title>
+    <style>
+        .container{
+            position: relative;
+        }
+
+        .nav{
+            font-size: 13px;
+            float: right;
+            list-style: none;
+            font-weight: bold;
+        }
+        .nav li{
+            display: inline-block;
+            margin-left: 10px;
+        }
+        .nav a:link,.nav a:visited{
+            color: black;
+        }
+        .nav a:hover,.nav a:active{
+            color:#0000cc;
+        }
+
+        .logo{
+            display: block;
+            width:300px;
+            margin-left: auto;
+            margin-right: auto;
+            clear:right;
+        }
+
+        .search{
+            text-align: center;
+        }
+        .search :nth-child(1){
+            width: 500px;
+            height: 30px;
+        }
+        .search .img{
+            position: absolute;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url(../bd_camera.png);
+            margin-top: 10px;
+            margin-left: -30px;
+        }
+        .search .img:hover{
+            background-position: 0 -20px;
+        }
+        .search :nth-child(3){
+            width: 100px;
+            height: 36px;
+            margin-left: -6px;
+            background: #3385ff;
+            color:beige;
+            vertical-align: bottom;
+            border:0;
+        }
+        .search :nth-child(3){
+            backface-visibility: #3075dc;
+        }
+
+        .footer{
+            margin-top: 200px;
+        }
+        .footer .img,.footer {
+            text-align: center;
+        }
+        .footer .img img{
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+        }
+        .footer .img p{
+            margin-top:-3px;
+            font-size: 15px;
+        }
+        .footer .wrap {
+            overflow: hidden;
+            list-style: none;
+            font-size: 10px;
+            line-height: 22px;
+            margin-left: -46px;
+        }
+        .footer .wrap .ln li {
+            display: inline-block;  
+            margin-left:30px;
+        }
+        .footer .wrap .ln li a:link{
+            color:#999999;
+        }
+
+        .statement,.statement a{
+            color: #999999;
+        }
+        .statement .a{
+            margin-left:15px;
+        }
+        .statement span{
+            background-image: url(../list-test.png);
+            display: inline-block;
+            height: 20px;
+            width:20px;
+            margin-bottom: -2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="nav">
+        <ul>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">hao123</a></li>
+            <li><a href="#">地图</a></li>
+            <li><a href="#">视频</a></li>
+            <li><a href="#">学术</a></li>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">设置</a></li>
+        </ul>
+    </div>
+
+    <img class="logo"src="../bd_logo.png" alt="百度logo">
+
+    <div class="search">
+        <input type="text" value=""name="keyword">
+        <span class="img"></span>
+        <input type="button" value="百度一下" name="">
+    </div>
+
+    <div class="footer">
+        <div class="img">
+            <img src="../bd_qr.png" alt="qr-code">
+            <p>百度</p>
+        </div>
+        <div class="wrap">
+            <div class="ln">
+                <ul>
+                    <li><a href="#">把百度设为主页</a></li>
+                    <li><a href="#">关于百度</a></li>
+                    <li><a href="#">About Baidu</a></li>
+                    <li><a href="#">百度推广</a></li>
+                </ul>    
+            </div>
+            <div class="statement">
+                <p>
+                    &copy;2018 Baidu
+                    <a href="#">使用百度前必读</a>
+                    <a href="#">意见反馈</a>
+                    京ICP证030173号
+                    <a class="a">京公安备00000000000000号</a>
+                    <span class="police"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
