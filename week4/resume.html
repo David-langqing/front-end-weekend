@@ -4,103 +4,400 @@
     <title>resume</title>
     <meta charset="utf-8">
     <style>
+        body{
+            background-color: #e8ebf0;
+        }
         .container{
             width:80%;
             position: relative;
             margin:0 auto;
+            margin-left:10%;
+            margin-right: 10%;
             overflow: hidden;
         }
+
         .left{
             background-color: rgb(40,56,71);
             width:30%;
             float:left;
             position: absolute;
+            top: 0;
+            bottom: 0;
         }
         .main{
-            background-color: blue;
-            height:800px;
+            height:auto;
             margin-left: 31%;
             width:69%;
             float:left;
+            bottom: 0;
+        }
+
+        .center{
+            text-align: center;
         }
         h1{
             background-color: #15223c;
             margin-top: 0px;
-            font-size: 25px;
-            text-align: center;
+            font-size: 30px;
             color:rgb(227, 231, 235);
         }
-        .box_logo{
-            height:200px;
-            width: 290px;
-            background-color: #22303D;
-            margin-top:0px;
-        }
         .logo{
-            margin-left:95px;
+            background-color: #22303d;
+            width: 100%;
+            margin-top: -20px;
         }
-        .box_logo img{
-            height: 100px;
-            width: 100px;
-            background: #22303D;
-        }
-        .left>h2{
-            text-align: center;
-        }
-        .left>p{
-            text-indent:30px;
+        .logo img{
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            margin-top:30px;
         }
         .left>img{
-            height: 100px;
-            width: 100px;
-            background: #22303D;
-            margin-left:60px;
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            margin-top:180px;
+            margin-left: 40px;
+        }
+        .logo h2{
+            padding-bottom: 30px;
+            color:#e8ebf0;
+        }
+        h2{
+            color:#e8ebf0;
+        }
+        .left p{
+            text-indent: 35px;
+            display: block;
+            color: rgb(124, 122, 124)
+        }
+        .left ul li{
+            list-style:none;
+            color: #e8ebf0;
+        }
+
+        .main .header{
+            overflow: hidden;
+            color:rgb(247, 250, 252);
+        }
+        .personal_details,.contact_details{
+            width: 49%;
+            height: 230px;
+            box-sizing: border-box;
+            border:0;
+            float: left;
+            position: relative;
+        }
+        .personal_details{
+            background-color:#dd4e3d;
+        }
+        .contact_details{
+            background-color: #20b494;
+            margin-left: 2%;
+        }
+        .personal_details .title{
+            margin-top: 40px;
+            margin-left: 35px;
+        }
+        .personal_details ul{
+            margin-top: 20px;
+            list-style: none;
+            margin-left: -5px;
+        }
+        .contact_details .title{
+            margin-top: 40px;
+            margin-left: 35px;
+        }
+        .contact_details ul{
+            margin-top: 20px;
+            list-style: none;
+            margin-left: -5px;
+        }
+
+        .exper{
+            width: 100%;
+            background-color:white;
+            height: 340px;
+            margin-top:20px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        .exper-title{
+            padding-top: 10px;
+            margin-left: 25px;
+            color:rgb(36, 35, 35);
+        }
+        .exper-body-left{
+            position: absolute;
+            width: 26%;
+            float:left;
+            box-sizing: border-box;
+        }
+        .exper-body-right{
+            width: 72%;
+            margin-left: 28%;
+            float: left;
+            box-sizing: border-box;
+        }
+        .exper-body-left>h3,.exper-body-right>h3{
+            margin-left: 25px;
+            margin-top: 15px;
+            color:rgb(65, 63, 63);
+        }
+        .exper-body-left p,.exper-body-right p{
+            margin-left: 25px;
+            margin-top: 15px;
+            color:rgb(128, 125, 125);
+        }
+        .exper-body2-left{
+            position: absolute;
+            width: 26%;
+            margin-top: 118px;
+            float:left;
+            box-sizing: border-box;
+        }
+        .exper-body2-right{
+            width: 72%;
+            margin-left: 28%;
+            float: left;
+            box-sizing: border-box;
+        }
+        .exper-body2-left>h3,.exper-body2-right>h3{
+            margin-left: 25px;
+            margin-top: 15px;
+            color:rgb(65, 63, 63);
+        }
+        .exper-body2-left p,.exper-body2-right p{
+            margin-left: 25px;
+            margin-top: 15px;
+            color:rgb(128, 125, 125);
+        }
+
+        .edu-exper{
+            width: 100%;
+            background-color:white;
+            height: 340px;
+            margin-top:20px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        .edu-exper-title{
+            padding-top: 15px;
+            margin-left: 25px;
+            color:rgb(36, 35, 35);
+        }
+        .edu-exper-body-left{
+            position: absolute;
+            width: 26%;
+            float:left;
+            box-sizing: border-box;
+            margin-top:5px;
+        }
+        .edu-exper-body-right{
+            width: 72%;
+            margin-left: 28%;
+            float: left;
+            box-sizing: border-box;
+        }
+        .edu-exper-body-left>h3,.exper-body-right>h3{
+            margin-left: 25px;
+            margin-top: 15px;
+            color:rgb(65, 63, 63);
+        }
+        .edu-exper-body-left p,.exper-body-right p{
+            margin-left: 25px;
+            margin-top: 15px;
+            color:rgb(128, 125, 125);
+        }
+        .edu-exper-body2-left{
+            position: absolute;
+            width: 26%;
+            margin-top: 121px;
+            float:left;
+            box-sizing: border-box;
+        }
+        .edu-exper-body2-right{
+            width: 72%;
+            margin-left: 25%;
+            float: left;
+            box-sizing: border-box;
+        }
+        .edu-exper-body2-left>h3,.edu-exper-body2-right>h3{
+            margin-left: 25px;
+            margin-top: 15px;
+            color:rgb(65, 63, 63);
+        }
+        .edu-exper-body2-left p,.edu-exper-body2-right p{
+            margin-left: 25px;
+            margin-top: 15px;
+            color:rgb(128, 125, 125);
+        }
+        .contest-exper{
+            background-color: #3883cb;
+            color:#e8ebf0;
+            margin-top: 20px;
+            padding-bottom: 20px;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+        .contest-exper h2{
+            margin-left: 27px;
+            display: inline-block;
+            padding-top: 22px;
+        }
+        .container-contest{
+            margin-left: 25px;
+            margin-top:5px;
+            font-size: 15px;
+        }
+        .contest-left{
+            width: 46%;
+            box-sizing: border-box;
+            border:0;
+            float: left;
+            margin-left: 2%;
+        }
+        .contest-right{
+            width: 46%;
+            box-sizing: border-box;
+            border:0;
+            float: left;
+            margin-left: 6%;
+        }
+        .icon1,.icon2,.icon3,.icon4,.icon5{
+            display: inline-block;
+            height: 55px;
+            width: 55px;
+            position: absolute;
+            top:15px;
+            right: 15px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-    <div class="left">
-        <h1>个人简历</h1><!--
-    --><div class="box_logo">
-            <div class="logo">
-                <img src="../c.jpg" alt="logo">
-                <h2>&nbsp;&nbsp;马建伟</h2>
+        <div class="left">
+            <div class="center">
+                <h1>个人简历</h1>
+                <div class="logo">
+                    <img src="../l.png" alt="logo">
+                    <h2>马建伟</h2>
+                </div>
+                <h2>SelfIntroduction</h2>
+            </div><!--
+            --><p>豫章故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨戟遥临；宇文新州之懿范，襜帷暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家君作宰，路出名区；童子何知，躬逢胜饯。
+            时维九月，序属三秋。潦水尽而寒潭清，烟光凝而暮山紫。俨骖騑于上路，访风景于崇阿；临帝子之长洲，得天人之旧馆。层峦耸翠，上出重霄；飞阁流丹，下临无地。鹤汀凫渚，穷岛屿之萦回；桂殿兰宫，即冈峦之体势。</p>
+            <br><br><br>
+
+            <img src="../d.png"alt="二维码">
+            <div class="contactinfor">
+                <ul>
+                    <li>iPhone:77753553333</li>
+                    <li>Email:333333355555@qq.com</li>
+                    <li>qq:554156895156451</li>
+                </ul>
             </div>
         </div>
 
-        <h2>SelfIntroduction</h2>
-        <p>豫章故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨戟遥临；宇文新州之懿范，襜帷暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家君作宰，路出名区；童子何知，躬逢胜饯。
-                时维九月，序属三秋。潦水尽而寒潭清，烟光凝而暮山紫。俨骖騑于上路，访风景于崇阿；临帝子之长洲，得天人之旧馆。层峦耸翠，上出重霄；飞阁流丹，下临无地。鹤汀凫渚，穷岛屿之萦回；桂殿兰宫，即冈峦之体势。</p>
-        <br><br><br>
-        <img src="../d.png"alt="二维码">
-        <div class="contactinfor">
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        </div>
-    </div>
-    
-    <div class="main">
-        <div>
-            <div class="personal_details"></div>
-            <div class="contact_details"></div>
-        </div>
-        <div>
-            <div class="main">
-                <div class="header"></div>
-                <div class="body">
-                    <div class=""></div>
-                    <div class=""></div>
-                </div>              
+        <div class="main">
+            <div class="header">
+                <div class="personal_details">
+                    <h2 class="title">基本资料</h2>
+                    <img class="icon1" src="../icon1.png" alt="icon1";>
+                    <ul>
+                        <li>出生年月：1999年12月17日</li>
+                        <li>专业：计算机科学与技术</li>
+                        <li>学历：本科</li>
+                        <li>职业：学生</li>
+                    </ul>
+                </div>
+                <div class="contact_details">
+                    <h2 class="title">联系方式</h2>
+                    <img class="icon2" src="../icon2.png" alt="icon2";>
+                    <ul>
+                        <li>iPhone:77753553333</li>
+                        <li>Email:333333355555@qq.com</li>
+                        <li>qq:554156895156451</li>
+                    </ul>
+                </div>
             </div>
-            <div class=""></div>
-        </div>
-        <div></div>
-        <div></div>
-    </div>
+            <div>
+                <div class="exper">
+                    <h2 class="exper-title">项目经历</h2>
+                    <img class="icon3" src="../icon3.png" alt="icon3";>
+                    <div class="exper-body">
+                        <div class="exper-body-left">
+                            <h3>程序小小白</h3>
+                            <p>2015-2017</p>
+                        </div>
+                        <div class="exper-body-right">
+                            <h3>文经学院计算机科学与技术专业</h3>
+                            <p>披绣闼，俯雕甍，山原旷其盈视，川泽纡其骇瞩。闾阎扑地，钟鸣鼎食之家；舸舰弥津，青雀黄龙之舳。</p>
+                        </div>
+                    </div>
+                    <div class="exper-body2">
+                            <div class="exper-body2-left">
+                                <h3>程序小白</h3>
+                                <p>2017-2018</p>
+                            </div>
+                            <div class="exper-body2-right">
+                                <h3>山东省软件设计大赛</h3>
+                                <p>披绣闼，俯雕甍，山原旷其盈视，川泽纡其骇瞩。闾阎扑地，钟鸣鼎食之家；舸舰弥津，青雀黄龙之舳。</p>
+                            </div>
+                        </div>                
+                </div>
+            </div>
+            <div>
+                <div class="edu-exper">
+                        <h2 class="edu-exper-title">教育经历</h2>
+                        <img class="icon4" src="../icon4.png" alt="icon4";>
+                        <div class="eduexper-body">
+                            <div class="edu-exper-body-left">
+                                <h3>本科</h3>
+                                <p>2015-2018</p>
+                            </div>
+                            <div class="edu-exper-body-right">
+                                <h3>文经学院计算机科学与技术专业</h3>
+                                <p>披绣闼，俯雕甍，山原旷其盈视，川泽纡其骇瞩。闾阎扑地，钟鸣鼎食之家；舸舰弥津，青雀黄龙之舳。</p>
+                            </div>
+                        </div>
+                        <div class="edu-exper-body2">
+                                <div class="edu-exper-body2-left">
+                                    <h3>暂无</h3>
+                                    <p>2018-以后</p>
+                                </div>
+                                <div class="edu-exper-body2-right">
+                                    <h3>暂无</h3>
+                                    <p>披绣闼，俯雕甍，山原旷其盈视，川泽纡其骇瞩。闾阎扑地，钟鸣鼎食之家；舸舰弥津，青雀黄龙之舳。</p>
+                                </div>
+                        </div>                
+                </div>
+            </div>
+            <div class="contest-exper">
+                <h2>获奖经历</h2>
+                <img class="icon5" src="../icon5.png" alt="icon5";>
+                <div class="container-contest">
+                    <div class="contest-left">
+                        <ul>
+                            <li>2015 年 团校培训优秀学生</li>
+                            <li>2015 年 齐鲁软件设计大赛</li>
+                            <li>2016 年 大学生网络安全大赛</li>
+                            <li>2015 年 齐鲁软件设计大赛</li>
+                        </ul>
+                    </div>
+                    <div class="contest-right">
+                        <ul>
+                            <li>2015 年 团校培训优秀学生</li>
+                            <li>2015 年 齐鲁软件设计大赛</li>
+                            <li>2016 年 大学生网络安全大赛</li>
+                            <li>2015 年 齐鲁软件设计大赛</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
     </div>
 </body>
 </html>
