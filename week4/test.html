@@ -4,14 +4,112 @@
         <title>test</title>
         <meta charset="utf-8">
         <style>
-            
+            div{
+                background-color: rgb(171, 190, 247);
+            }
+            .box{
+                margin:20px;
+                height: 300px;
+                width: 300px;
+            }
+            .in{
+                height: 100px;
+                width: 100px;
+                background-color: rgb(57, 253, 100);
+            }
+            .blue {
+                background-color: blue;
+                color: #fff;
+            }
+            .position1 .in{
+                position: static;
+            }
+            .position2 .in{
+                position: relative;
+            }
+            .position3 .in{
+                position: absolute;
+            }
+            .position4 .in{
+                position: fixed;
+            }
+            .position5 .out{
+                position: relative;
+                display: inline;
+                background-color: yellowgreen;
+                font-size: 100px;
+                line-height: 200px;
+            }
+            .position5 .in{
+                position: absolute;
+                top:0;
+                left: 0;
+            }
+            .position6{
+                position: relative;
+            }
+            .position6 .in{
+                position: absolute;
+                right: -50px;
+                top: -20px;
+            }
+            .position-test7 {
+                position: relative;
+                font-size: 0;
+            }
+            .position-test7 .in {
+                display: inline-block;
+            }
+            .position-test7 .in2 {
+                display: inline-block;
+                font-size: 20px;
+                position: absolute;
+                background-color: lightyellow;
+            }
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="side"></div>
-            <div class="main"></div>
-
+        <h2>定位对于文档流的影响</h2>
+        <div class="position1 box">
+            <div class="in">
+                static
+            </div>
+            <p>我是问你我是问你我是问你我是问你我是问你我是问你我是问你我是问你</p>
+        </div>
+        <div class="position2 box">
+            <div class="in">
+                relative
+            </div>
+            <p>我是问你我是问你我是问你我是问你我是问你我是问你我是问你我是问你</p>
+        </div>
+        <div class="position3 box">
+            <div class="in">
+                absolute
+            </div>
+            <p>我是问你我是问你我是问你我是问你我是问你我是问你我是问你我是问你</p>
+        </div>
+        <div class="position4 box">
+            <div class="in">
+                fixed
+            </div>
+            <p>我是问你我是问你我是问你我是问你我是问你我是问你我是问你我是问你</p>
+        </div>
+        <h2>absolute的定位元素是行元素，包含块边界是内容区域</h2>
+        <div class="position5 box">
+            <div class="out">
+                1111
+                <div class="in"></div>
+            </div>
+        </div>
+        <h2>absolute定位的偏移是负值</h2>
+        <div class="position6 box">
+            <div class="in">我是啦啦啦啦</div>
+        </div>
+        <h2>absolute 定位如果 offset 为 auto ，默认在原始位置</h2>
+        <div class="position7 box">
+            <div class="in"></div>
+            <div class="in2">交换机科技示范</div>
+            <div class="in blue"></div>
         </div>
     </body>
 </html>
