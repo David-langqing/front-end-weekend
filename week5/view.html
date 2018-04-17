@@ -1,0 +1,112 @@
+<idoctype html>
+    <html>
+        <head>
+            <title>view</title>
+            <style>
+                    .tab-content{
+                        display:block;
+                        color:#fff;
+                        text-decoration: none;
+                        margin:0;
+                        background-color: turquoise;
+                        box-shadow: 1px 1px 2px rgba(0, 0, 0, .15);
+                    }
+                    .popup-content {
+                        position: absolute;
+                        z-index: 200;
+
+                        width: 700px;
+                        height: 400px;
+                        box-sizing: border-box;
+
+                        left: 50%;
+                        top: 50%;
+                        margin-left: -350px;
+                        margin-top: -200px;
+                        padding: 30px 50px;
+
+                        background: #fff;
+                        box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+                        text-align: center;
+
+                        overflow: auto;
+                    }
+
+                    .popup-content h2 {
+                        color: #555;
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid #ddd;
+                    }
+
+                    .popup-content p {
+                        color: #888;
+                        font-size: 21px;
+                    }
+
+                    .popup-content button {
+                        color: #fff;
+                        background: #e74c3c;
+                        border-radius: 4px;
+                        border: 0;
+                        font-size: 21px;
+                        padding: 10px 50px;
+                    }
+
+                    .popup-content button:hover {
+                        background: #c0392b;
+                    }
+            </style>
+        </head>
+        <body>
+           <div class="list">
+                <ul>
+                    <li>主页</li>
+                    <li>新闻</li>
+                    <li>产品</li>
+                    <li>服务</li>
+                    <li>联系我们</li>
+                </ul>
+           </div>
+
+            <div id="content-chinese" class="tab-content">
+                    <h2>假如生活欺骗了你</h2>
+                    <div class="content">
+                        <p>假如生活
+                            <a href="#" class="link-popup">欺骗</a>了你，</p>
+                        <p>不要悲伤，不要心急！</p>
+                        <p>忧郁的日子里须要镇静：</p>
+                        <p>相信吧，快乐的日子将会来临！</p>
+                        <p>心儿永远向往着未来；</p>
+                        <p>现在却常是忧郁。</p>
+                        <p>一切都是瞬息，一切都将会过去；</p>
+                        <p>而那过去了的，就会成为亲切的怀恋。</p>
+                    </div>
+                </div>
+                <div class="popup">
+                        <div class="popup-content">
+                            <h2>假如生活护龙了你</h2>
+                            <p>假如生活护龙了你</p>
+                            <p>表吱声</p>
+                            <p>表咋呼</p>
+                            <p>表嘟囔</p>
+                            <p>也表年息儿</p>
+                            <p>更表哭丧个脸子</p>
+                            <p>你从哪儿跌倒</p>
+                            <p>就在哪儿爬一会儿</p>
+                            <p>也表起来</p>
+                            <p>一直往前顾应</p>
+                            <p>像毛毛虫一样</p>
+                            <p>顾应。。。顾应</p>
+                            <p>一直顾应</p>
+                            <p>总有一天</p>
+                            <p>你会变成</p>
+                            <p>有翅膀的</p>
+                            <p>扑棱蛾子</p>
+                            <p>到时候一抖搂翅膀</p>
+                            <p>想他么怎么飞就怎么飞</p>
+                            <button class="popup-close">关闭弹窗</button>
+                        </div>
+                        <div class="popup-bg"></div>
+                    </div>
+        </body>
+    </html>

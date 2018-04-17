@@ -44,7 +44,7 @@
                 position: absolute;
                 top:0;
                 left: 0;
-            }
+            } 
             .position6{
                 position: relative;
             }
@@ -53,18 +53,69 @@
                 right: -50px;
                 top: -20px;
             }
-            .position-test7 {
+            .position7 {
                 position: relative;
                 font-size: 0;
             }
-            .position-test7 .in {
+            .position7 .in {
                 display: inline-block;
             }
-            .position-test7 .in2 {
+            .position7 .in2 {
                 display: inline-block;
                 font-size: 20px;
                 position: absolute;
                 background-color: lightyellow;
+            }
+            .position7 .in2test{
+                display: inline-block;
+                font-size: 20px;
+                font-size: 20px;
+                position: absolute;
+                background-color: yellow;
+                margin-left: -50px;                
+            }
+            .position8 {
+                display: inline-block;
+                padding: 50px;
+            }
+            .position8 .in{
+                margin-left: 50px;
+            }
+            .position9 {
+                display: block;
+                overflow: auto;
+                position: relative;
+            }
+            .position9 .in {
+                position: absolute;
+                top: 50px;
+                left: 100px;
+            }
+            .position9 .in2 {
+                height: 800px;
+            }
+            .float-test {
+                position: relative;
+                overflow: hidden;
+            }
+            .float-test .out {
+                float: left;
+                width: 90%;
+            }
+            .float-test .out .in{
+                margin: 10px;
+                float: left;
+            }
+            .position10 {
+                position: relative;
+            }
+            .position10 .out{
+                display: inline-block;
+            }
+            .position10>.in{
+                position: absolute;
+                top: 0px;
+                left: 50px;
             }
         </style>
     </head>
@@ -110,6 +161,34 @@
             <div class="in"></div>
             <div class="in2">交换机科技示范</div>
             <div class="in blue"></div>
+        </div>
+        <h2>absolute 定位如果 offset 为 auto ，默认在原始位置，可用负margin针对原位置做偏移</h2>
+        <div class="position7 box">
+            <div class="in"></div>
+            <div class="in2test">交换机科技示范</div>
+            <div class="in blue"></div>
+        </div>
+        <h2>absolute 指定偏移，以及复杂 auto 计算</h2>
+        <div class="position8 box">
+            <div class="in blue"></div>
+        </div>
+        <h2>absolute 的随滚动条滚动</h2>
+        <div class="position9 box">
+            <div class="in blue"></div>
+            <div class ="in2"></div>
+        </div>
+        <h2>浮动包含块自动延伸，包含住所有包含块</h2>
+        <div class="float-test box">
+            <div class="out blue">
+                <div class="in"></div>
+                <div class="in"></div>
+                <div class="in"></div>
+            </div>
+        </div>
+        <h2>absolute包含块不会自动包含住所有所有后代定位元素</h2>
+        <div class = "position10 box">
+            <div class= "out blue">gfsdfgsdfgdfg</div>
+            <div class="in"></div>
         </div>
     </body>
 </html>
