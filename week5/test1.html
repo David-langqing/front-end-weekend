@@ -1,0 +1,77 @@
+<idoctype html>
+    <html>
+        <head>
+            <title>test1</title>
+            <style>
+                body{
+                    background-color: lightgreen; 
+                }
+             
+                .forestgreen{
+                    background-color: forestgreen;
+                }
+                
+                .menu {
+                    margin:0;
+                    padding:0;
+                    height: 65px;
+                  
+                }
+                ul{
+                    margin: 0;
+                    padding: 0;
+
+                }
+                .container li{
+                    position: relative; 
+                    display: block;
+                    list-style: none;
+                    float:left;
+                    border-right: 1px solid rgba(255,255,255,.3);
+                }
+                .container li a{
+                    display: block;
+                    line-height: 65px;
+                    text-decoration: none;
+                    font-size: 21px;
+                    padding:0 35px;
+                    color: aliceblue;
+                }
+                .container li ul{
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    top: 65px;
+                    background-color: forestgreen;
+                }
+                .container li ul li{
+                  
+                    border-right: 0;
+                    border-top: 1px solid rgba(255,255,255,.3);
+                    clear:left;
+                }
+                .container li ul li a{
+                    font-size: 14px;
+                    line-height: 50px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <ul class="menu forestgreen">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">新闻</a>
+                        <ul>
+                            <li><a href="#">国内</a></li>
+                            <li><a href="#">国外</a></li>
+                            <li><a href="#">体育</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">产品</a></li>
+                    <li><a href="#">服务</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+                <p>hkkkkkkkkkkkkkkkkj</p>
+            </div>    
+        </body>
+    </html>

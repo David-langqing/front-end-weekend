@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>practice</title>
+    <script src="main.js"></script>
+    <style>
+        body{
+            background: lightgreen;
+        }
+
+        .menu{
+            height: 65px;
+            background: green;
+        }
+        .container ul{
+            margin: 0;
+            padding: 0;
+
+        }
+        .container ul li{
+            position: relative;
+            display: block;
+            float: left;
+            list-style: none;
+        }
+        .container ul li a{
+            display: block;
+            line-height: 65px;
+            font-size: 21px;
+            padding: 0 35px;
+            color: aliceblue;
+            text-decoration: none;
+            text-align: center;
+            border-right: 1px solid rgba(255, 255, 255, .3);
+        }
+        .container li ul{
+            display: none;
+            clear: left;
+            float: left;
+            position: absolute;
+            top: 65px;
+            background: rgb(0, 128, 0);
+        }
+        .container li ul li{
+            width: 100%;
+        }
+        .container li ul li a{
+            line-height: 50px;
+            font-size: 14px;
+            border-right: 0;
+            border-top: 1px solid rgba(255, 255, 255, .3);
+            text-align: center;
+
+        }
+        .container li:hover{
+            background: rgb(1, 70, 1);
+        }
+        .container li:hover ul{
+            display: block;
+            background: rgb(0, 128, 0);
+        }
+
+        .tab-container{
+            background: #fff;
+            box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+        }
+        .tab-container ul{
+            background: #1abc9c;
+            margin:0;
+            padding: 0;
+            list-style: none;
+        }
+        .tab-container ul li{
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        .tab-container ul li a{
+            text-decoration: none;
+            display: block;
+            color: #fff;
+        }
+        .tab-container ul li a.active{
+            color:#1abc9c;
+            background: #fff;
+        }
+        .tab-content{
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="menu">
+            <li><a href="#">主页</a></li>
+            <li><a href="#">新闻</a>
+                <ul>
+                    <li><a href="#">体育</a></li>
+                    <li><a href="#">天气</a></li>
+                    <li><a href="#">金融</a></li>
+                </ul>
+            </li>
+            <li><a href="#">产品</a>
+                <ul>
+                    <li><a href="#">机器</a></li>
+                    <li><a href="#">压缩机</a></li>
+                    <li><a href="#">建筑</a></li>
+                    <li><a href="#">车辆</a></li>
+                </ul>
+            </li>
+            <li><a href="#">服务</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+        <h1>假如生活欺骗了你</h1>
+    </div>
+    <div class="main">
+        <div class="tab-container">
+        <ul>
+            <li><a href="#" id="nav-russia">俄语</a></li>
+            <li><a href="#" id="nav-english">英语</a></li>
+            <li><a href="#" id="nav-chinese">汉语</a></li>
+            <li><a href="#" id="nav-yantai">烟台话</a></li>
+        </ul>
+
+        <div id="content-russia" class="tab-content">
+            <h2>Если жизнь тебя обманет</h2>
+            <div class="content">
+                <p>Если жизнь тебя обманет,</p>
+                <p>Не печалься，не сердись!</p>
+                <p>В день уныния смирись:</p>
+                <p>День веселья, верь, настанет.</p>
+                <p>Сердце в будущем живёт;</p>
+                <p>Настоящее уныло:</p>
+                <p>Все мгновенно，все пройдёт;</p>
+                <p>Что пройдёт, то будет мило.</p>
+                <p>KOBVCS</p>
+            </div>
+        </div>
+
+        <div id="content-english" class="tab-content">
+            <h2>If by Life You Were Deceived</h2>
+            <div class="content">
+                <p>If by life you were deceived,</p>
+                <p>Don't be dismal,don't be wild!</p>
+                <p>In the day of grief,be mild:</p>
+                <p>Merry days will come,believe.</p>
+                <p>Heart is living in tomorrow;</p>
+                <p>Present is dejected here:</p>
+                <p>In a moment,passes sorrow;</p>
+                <p>That which passes will be dear.</p>
+            </div>
+        </div>
+        <div id="content-chinese" class="tab-content">
+            <h2>假如生活欺骗了你</h2>
+            <div class="content">
+                <p>假如生活
+                    <a href="#" class="link-popup">欺骗</a>了你，</p>
+                <p>不要悲伤，不要心急！</p>
+                <p>忧郁的日子里须要镇静：</p>
+                <p>相信吧，快乐的日子将会来临！</p>
+                <p>心儿永远向往着未来；</p>
+                <p>现在却常是忧郁。</p>
+                <p>一切都是瞬息，一切都将会过去；</p>
+                <p>而那过去了的，就会成为亲切的怀恋。</p>
+            </div>
+        </div>
+
+        <div id="content-yantai" class="tab-content">
+            <h2>假如生活护龙了你</h2>
+            <div class="content">
+                <p>假如生活护龙了你</p>
+                <p>表吱声</p>
+                <p>表咋呼</p>
+                <p>表嘟囔</p>
+                <p>也表年息儿</p>
+                <p>更表哭丧个脸子</p>
+                <p>你从哪儿跌倒</p>
+                <p>就在哪儿爬一会儿</p>
+                <p>也表起来</p>
+                <p>一直往前顾应</p>
+                <p>像毛毛虫一样</p>
+                <p>顾应。。。顾应</p>
+                <p>一直顾应</p>
+                <p>总有一天</p>
+                <p>你会变成</p>
+                <p>有翅膀的</p>
+                <p>扑棱蛾子</p>
+                <p>到时候一抖搂翅膀</p>
+                <p>想他么怎么飞就怎么飞</p>
+            </div>
+        </div>
+        
+        <script>
+            //标签页
+            (function() {
+                var nav_russia = document.getElementById('nav-russia');
+                var nav_english = document.getElementById('nav-english');
+                var nav_chinese = document.getElementById('nav-chinese');
+                var nav_yantai = document.getElementById('nav-yantai');
+
+                var content_russia = document.getElementById('content-russia');
+                var content_chinese = document.getElementById('content-chinese');
+                var content_english = document.getElementById('content-english');
+                var content_yantai = document.getElementById('content-yantai');
+           
+
+            function hideAll(){
+                nav_russia.className = nav_english.className =
+                nav_chinese.className = nav_yantai.className =
+                'none';
+                content_chinese.style.display =
+                content_english.style.display =
+                content_russia.style.display =
+                content_yantai.style.display ='none';
+            } 
+
+            function showRussia(){
+                hideAll();
+                nav_russia.className = 'active';
+                content_russia.style.display = 'block';
+            }   
+            function showEnglish(){
+                hideAll();
+                nav_english.className = 'active';
+                content_english.style.display ='block';
+            }        
+            function showChinese(){
+                hideAll();
+                nav_chinese.className = 'active';
+                content_yantai.style.display = 'block';
+            }
+            function showYantai(){
+                hideAll();
+                nav_yantai.className = 'active';
+                content_yantai.style.display = 'block';
+            }
+            nav_russia.addEventListener('click',showRussia);
+            nav_chinese.addEventListener('click',showChinese);
+            nav_yantai.addEventListener('click',showYantai);
+            nav_english.addEventListener('click',showEnglish);
+
+            showChinese();
+        })();
+        </script>
+        
+        </div>
+    </div>
+</body>
+</html>
