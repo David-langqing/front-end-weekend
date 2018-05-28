@@ -1,0 +1,49 @@
+<idoctroy html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>animation</title>
+            
+            <style>
+                body{
+                    background: #009966;
+                }
+                .test1{
+                    width: 200px;
+                    height: 200px;
+                    background: lightblue;
+                    transition: all 32s;
+                }
+                .test1:hover{
+                    width: 300px;
+                    height: 300px;
+                    background: rgb(96, 96, 247);
+                }
+
+                .test2{
+                    position: relative;
+                    height: 200px;
+                }
+                .test2 img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                .test2 .wx{
+                    animation-name: wx;
+                    animation-duration: 5s;
+                    animation-timing-function: linear;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="test1"></div>
+            <h2>透明度动画</h2>
+            <div class="test2">
+                <img src="../images/weixin_1.svg">
+                <img class="wx2" src="../images/weixin_2.svg">
+            </div>
+        </body>
+    </html>

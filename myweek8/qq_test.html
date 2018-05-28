@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+        <style>
+        .container {
+            background: #fff;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, .15);
+        }
+
+        .container .nav {
+            background: #1abc9c;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .container .nav li {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .container .nav li a {
+            display: block;
+            /* 必须，否则背景色不会占满*/
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav li a.active {
+            color: #1abc9c;
+            background: #fff;
+        }
+
+        .tab-content {
+            padding: 25px;
+        }
+        </style>
+    </head>
+    <body>
+        <!--标签页-->
+        <div class="all">
+            <div class="container">
+                <ul class="nav">
+                    <li>
+                        <a href="#russia" id="nav-russia">俄语</a>
+                    </li>
+                    <li>
+                        <a href="#english" id="nav-english">英语</a>
+                    </li><li>
+                        <a href="#chinese" id="nav-chinese">汉语</a>
+                    </li>
+                </ul>
+                <div id="c-russia" class="tab-content">
+                    <h2>Если жизнь тебя обманет</h2>
+                    <div class="content">
+                        <p>Если жизнь тебя обманет,</p>
+                        <p>Не печалься，не сердись!</p>
+                        <p>В день уныния смирись:</p>
+                        <p>День веселья, верь, настанет.</p>
+                        <p>Сердце в будущем живёт;</p>
+                        <p>Настоящее уныло:</p>
+                        <p>Все мгновенно，все пройдёт;</p>
+                        <p>Что пройдёт, то будет мило.</p>
+                        <p>KOBVCS</p>
+                    </div>
+                </div>
+
+                <div id="c-english" class="tab-content">
+                    <h2>If by Life You Were Deceived</h2>
+                    <div class="content">
+                        <p>If by life you were deceived,</p>
+                        <p>Don't be dismal,don't be wild!</p>
+                        <p>In the day of grief,be mild:</p>
+                        <p>Merry days will come,believe.</p>
+                        <p>Heart is living in tomorrow;</p>
+                        <p>Present is dejected here:</p>
+                        <p>In a moment,passes sorrow;</p>
+                        <p>That which passes will be dear.</p>
+                    </div>
+                </div>
+                <div id="c-chinese" class="tab-content">
+                    <h2>假如生活欺骗了你</h2>
+                    <div class="content">
+                        <p>假如生活
+                        <a href="#" class="link-popup">欺骗</a>了你，</p>
+                        <p>不要悲伤，不要心急！</p>
+                        <p>忧郁的日子里须要镇静：</p>
+                        <p>相信吧，快乐的日子将会来临！</p>
+                        <p>心儿永远向往着未来；</p>
+                        <p>现在却常是忧郁。</p>
+                        <p>一切都是瞬息，一切都将会过去；</p>
+                        <p>而那过去了的，就会成为亲切的怀恋。</p>
+                    </div>
+                </div>
+            
+            </div>
+            <script>
+                (
+                    function(){
+                        var nav_russia = document.getElementById('nav-russia');
+                        var nav_english = document.getElementById('nav-english');
+                        var nav_chinese = document.getElementById('nav-chinese');
+
+                        var c_russia = document.getElementById('c-russia') ;    
+                        var c_englsih = document.getElementById('c-english') ;    
+                        var c_chinese = document.getElementById('c-chinese') ;    
+                  
+                        
+                        function hideAll(){
+                            nav_russia.className=nav_chinese.className=nav_english.className='none';
+                            c_chinese.style.display=c_englsih.style.display=c_russia.style.display='none';
+                        }
+
+                        function showrussia(){
+                            hideAll();
+                            nav_russia.className='active';
+                            c_russia.style.display='block';
+                        }
+                        function showchinese(){
+                            hideAll();
+                            nav_chinese.className='active';
+                            c_chinese.style.display='block';
+                        }
+                        function showenglish(){
+                            hideAll();
+                            nav_english.className='active';
+                            c_englsih.style.display='block';
+                        }
+
+                        nav_chinese.addEventListener('click',showchinese);
+                        nav_english.addEventListener('click',showenglish);
+                        nav_russia.addEventListener('click',showrussia);
+
+                        showchinese;
+                    }
+                )
+            </script>
+        </div>
+    </body>
+    </html>

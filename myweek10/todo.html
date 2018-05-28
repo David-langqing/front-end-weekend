@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<IMPUT>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txttask">
+    <button id="btnadd">Add</button>
+    <h2>todolist</h2>
+    <ol id="todo_list"></ol>
+    <script>
+        var todo_list = localStorage;
+
+        btnadd.onclick = function () {
+            var task = txttask.value;
+            todo_list.push(task);
+            localStorage.setItem('todo-list',JSON.stringify);
+
+            var li = document.createDocumentFragment('li');
+            li.inn
+        }
+    </script>
+</body>
+</html>

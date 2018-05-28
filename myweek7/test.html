@@ -1,0 +1,173 @@
+<idoctype html>
+    <html>
+        <head>
+            <title>ability by bootstrap</title>
+            <meta charset="utf-8">
+            <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="../lib/bootstrap-3.3.7/css/bootstrap.min.css">
+            <script src="https://cdn.bootcss.com/echarts/4.0.4/echarts.min.js"></script>
+            <meta http-equiv="X-UA-Com[atible" content="ie=edge">
+            <style>
+                body{
+                    background-color: greenyellow;
+                }
+
+                .test1{
+                    width: 200px;
+                    height: 200px;
+                    background: blueviolet;
+                    transition: all 1s;
+                }
+
+                .test1:hover{
+                    width: 300px;
+                    height: 300px;
+                    background: blue;
+                }
+
+                .test2{
+                    width: 300px;
+                    height: 300px;
+                    position: relative;
+                }
+                .test2 img{
+                    position: absolute;
+                    opacity: 1;
+                }
+                .test2 img.mask{
+                    animation-name: weixin;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                }
+                @keyframes weixin{
+                    0%{opacity: 0;}
+                    0.1%{opacity: 1;}
+                    50%{opacity: 1;}
+                    50.1%{opacity: 0;}
+                    100%{opacity: 0;}
+                }
+                .test3{
+                    background: #fff;
+                }
+                .test3 svg{
+                    width: 100%;
+                }
+                .test3 .line{
+                    stroke:red;
+                    stroke-width:3px;
+                    stroke-dasharray: 20px;
+
+                    animation-name: line;
+                    animation-duration: 3s;
+                    
+                }
+                @keyframes line{
+                    0%{
+                        opacity: 0;
+                    }
+                    0.1%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 1;
+                    }
+                }
+                .test4 img{
+                    animation-name: phone;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                }
+                @keyframes phone{
+                    0%{
+                        transform: rotate(0deg)
+                    }
+                    1%{
+                        transform: rotate(5deg)
+                    }
+                    10%{
+                        transform: rotate(15deg)
+                    }
+                    50%{
+                        transform: rotate(-15deg)
+                    }
+                    75%{
+                        transform: rotate(50deg)
+                    }
+                    100%{
+                        transform: rotate(60deg)
+                    }
+                }
+                .test5{
+                    position: relative;
+                }
+                .test5 img{
+                    position: absolute;
+                }
+                .test5 .email-top img{
+                    position: absolute;
+                    top: -30px;
+                    left: 0;
+                    transform: rotate(180edg);
+                    transform-origin: 50% 100%;
+
+                    animation-name: email-top;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                }
+                @keyframes email-top{
+                    0%{
+                        transform: rotateX(0deg);
+                    }
+                    15%{
+                        transform: rotateX(0deg);
+                    }
+                    45%{
+                        transform: rotateX(0deg);
+                    }
+                    100%{
+                        transform: rotateX(0deg);
+                    }
+                }
+                .test5 .email-bottom img{
+                    position: absolute;
+                    top: 2px;
+                    left: 25px;
+                }
+                .test5 .email-inner img{
+                    position: absolute;
+                    top: 39px;
+                    left: 20px;
+                    height: 15px;
+                    overflow: hidden;
+
+                    animation: emailinner 5s linear 0s infinite;
+                }
+                @keyframes emailinner{
+                    100%{
+                        top: 10px;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="test1"></div>
+            <div class="test2">
+                <img src="../images/weixin_2.svg">
+                <img class="mask"src="../images/weixin_1.svg">
+            </div>
+            <div class="test3">
+                <svg height="500px">
+                    <line class="line" x1="0"
+                        y1="0" x2="400"
+                        y2="200"
+                        style="" />
+                </svg>
+            </div>
+            <div class="test4">
+                <img src="../images/shake_phone.svg">
+            </div>
+            <div class="test5">
+                <img src="../images/week7/emil_top">
+            </div>
+        </body>
+    </html>

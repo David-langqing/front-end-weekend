@@ -1,0 +1,487 @@
+<idoctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        button {
+            cursor: pointer;
+        }
+        body, button, input, select, textarea, th {
+            color: #333;
+            background-color: #fff;
+            font-size: 14px;
+            line-height: 1.5;
+            font-family: poppin,Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+            font-family: Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif/9;
+        }
+        body{
+            min-width: 1024px;
+            overflow: scroll;
+
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            color: #333;
+            text-decoration: none;
+        }
+        div {
+            display: block;
+        }
+
+        .header{
+            position: relative;
+            z-index: 4;
+            background-color: #fff;
+        }
+        .header .head_main{
+            padding-top: 90px;
+        }
+        .head_main{
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .qq_title{
+            position: absolute;
+            left: 0;
+            top: 15PX;
+        }
+        .logo_qq{
+            width: 170px;
+            height: 46px;
+        }
+        .mod_top_nav{
+            position: absolute;
+            top:0;
+            left: 198px;
+        }
+        .top_nav_item{
+            float: left;
+            margin-right: -5px;
+        }
+        .top_nav_link{
+            display: block;
+            line-height: 90px;
+            padding: 0 20px;
+            height: 90px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .top_nav_link--current{
+            background-color: 31C27C;
+            color: #fff;
+        }
+
+        .mod_top_subnav{
+            height: 51px;
+            padding-left: 230px;
+            border-top: 1px solid #F2F2F2;
+            margin-right: -50PX;
+            line-height: 51PX;
+        }
+        .top_subnav__item{
+            float: left;
+            font-size: 15px;
+            color: #C1C1C1;
+            margin-right: 47px;
+        }
+        .top_nav_link{
+            display: block;
+        }
+        .top_subnav__link--current{
+            color: #31c27c;
+        }
+        .mod_top_search{
+            position: absolute;
+            top: 0;
+            right: 284px;
+        }
+        .search_input{
+            border: 1px solid #C9C9C9;
+            padding: 0 33px 0 11px;
+            line-height: 36px;
+            height: 36px;
+            margin-top: 26px;
+            position: relative;
+            border-radius: 3px;
+            transition: width .6s ease-out;
+        }
+        .search_input_input{
+            width: 174px;
+            height: 36px;
+            border: 0 none;
+            font-size: 14px;
+            transition: width .6s ease-out,visibility .6s 1ms ease-out;
+            background: 0 0;
+        }
+        .search_input__btn{
+            position: absolute;
+            top:0;
+            right:0;
+            border: 0 none;
+            width: 38px;
+            height: 35px;
+            overflow: visible;
+            background: 0 0;
+        }
+       
+        .sprite, .sprite_before:before {
+            background-image: url(./images/icon_sprite.png)
+        }
+        i, cite, em, var, address, dfn {
+            font-style: italic;
+        }
+        .icon_search {
+            position: absolute;
+            top: 50%;
+            right: 11px;
+            margin-top: -7px;
+            width: 16px;
+            height: 16px;
+            background-position: 0 -40px;
+        }
+        .header__opt{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 90px;
+            line-height: 90px;
+        }
+        .top_login{
+            font-size: 0;
+            height: 90px;
+            line-height: 90px;
+        }
+        .top_login__link{
+            position: relative;
+            font-size: 16px;
+            float: left;
+            width: 38px;
+            margin-right: 10px;
+            text-align: center;
+        }
+        .top_login__btn_vip{
+            line-height: 39px;
+            margin-top: 24px;
+            padding: 0 9px;
+            margin-left: 10px;
+            margin-right: 0;
+            font-size: 13px;
+        }
+        .btn_green{
+            border:1px solid #31c27c;
+            background-color: #31c27c;
+            color:#fff;
+            border-radius: 2px;
+            height: 38px;
+            display: inline-block;
+            white-space: nowrap;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .btn_vip{
+            border: 1px solid #c9c9c9;
+            color: #333;
+            border-radius: 2px;
+            height: 38px;
+            display: inline-block;
+            white-space: nowrap;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin-right: 50px;
+        }
+
+
+        .two_title{
+            position: relative;
+            padding: 4.16667%;
+            padding-bottom: 2%;
+        }
+        .two_inner{
+            z-index: 2;
+            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .two_back{
+            background: url(./images/bg_detail.jpg) 50% 0 repeat-x;
+            position: relative;
+        }
+        .two_title h2{
+            font-size: 30px;
+            text-align: center;
+            letter-spacing: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        .two_index_tab{
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, .15);
+            height: 50px;
+            text-align: center;
+        }
+        .nav{
+            list-style: none;
+            margin:0 auto;
+            padding: 0;
+        }
+        .nav li{
+            height: 50px;
+            width: 100px;
+            line-height: 50px;
+            display: inline-block;
+            text-align: center;
+
+        }
+        .nav li a{
+            color: rgb(131,131,131);
+            display: block;
+            text-decoration: none;
+        }
+        .nav li a.active {
+            color: #1abc9c;
+        }
+        .tab-content{
+            padding: 25px;
+        }
+
+        .tab-t{
+            
+            padding-left: 6px;
+        }
+        .pic img{
+
+            height: 225px;
+            width: 225px;
+            margin-left: 10px;
+            float: left;
+        }
+        .nav li a.active {
+            color: #1abc9c;
+        }
+    </style>
+</head>
+<body class="all">
+    <div class="header">
+        <div class="head_main">
+            <h1 class="qq_title">
+                <a href="//y.qq.com">
+                    <img class="logo_qq" src="./images/logo_qq.png" alt="QQ音乐">
+                </a>
+            </h1>
+            <ul class="mod_top_nav">
+                <li class="top_nav_item">
+                    <a class="top_nav_link top_nav_link--current">音乐馆</a>
+                </li>
+                <li class="top_nav_item">
+                    <a class="top_nav_link">我的音乐</a>
+                </li>
+                <li class="top_nav_item">
+                    <a class="top_nav_link">客户端</a>
+                </li>
+                <li class="top_nav_item">
+                    <a class="top_nav_link">音乐号</a>
+                </li>
+                <li class="top_nav_item">
+                    <a class="top_nav_link">VIP</a>
+                </li>
+            </ul>
+            <ul class="mod_top_subnav">
+                <li class="top_subnav__item">
+                    <a href="//y.qq.com" class="top_subnav__link top_subnav__link--current">首页</a>
+                </li>
+                <li class="top_subnav__item">
+                    <a href="/portal/singer_list.html" class="top_subnav__link">歌手</a>
+                </li>
+                <li class="top_subnav__item">
+                    <a href="/portal/album_lib.html" class="top_subnav__link">专辑</a>
+                </li>
+                <li class="top_subnav__item">
+                    <a href="/n/yqq/toplist/4.html" class="top_subnav__link">排行榜</a>
+                </li>
+                <li class="top_subnav__item">
+                    <a href="/portal/playlist.html" class="top_subnav__link">分类歌单</a>
+                </li>
+                <li class="top_subnav__item">
+                    <a href="/portal/radio.html" class="top_subnav__link">电台</a>
+                </li>
+                <li class="top_subnav__item">
+                    <a href="/portal/mv_lib.html#t6=2" class="top_subnav__link">MV</a>
+                </li>
+                <li class="top_subnav__item">
+                    <a href="cla/portal/album_mall.html" class="top_subnav__link">数字专辑</a>
+                </li>
+            </ul>
+            <!--搜索框-->
+            <div class="mod_top_search">
+                <div class="search_input">
+                    <input class="search_input_input" aria_label="请输入搜索内容"type="text"placeholder="搜索音乐、MV、歌单、用户"accesskey="s">
+                    <button class="search_input__btn">
+                        <i class="icon_search sprite"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header__opt">
+            <span class="top_login">
+                <a class="top_login__link js_login" data-stat="y_new.top.login" href="javascrit:;">登录</a>
+                <a class="btn_green top_login__btn_vip js_openvip" data-aid="music.pc.20316.newyqqtop" data-stat="music.20316.btnclick.pc" href="javascript:;">开通绿钻豪华版</a>
+                <a class="top_login__btn_vip btn_vip js_openvip" data-aid="music.pc.20316.newyqqtop" data-stat="music.20316.btnclick.pc" href="javascript:;">开通付费包</a>
+
+            </span>
+        </div>
+    </div>
+    <div class="two_back">
+        <div class="two_inner">
+            <div class="two_title">
+                <h2>
+                   歌单推荐
+                </h2>
+            </div>
+            <div class="two_index_tab">
+                <ul class="nav">
+                    <li><a href="#content-tuijian" id="nav-tuijian">为你推荐</a></li>
+                    <li><a href="#content-netsong" id="nav-netsong">网络歌曲</a></li>
+                    <li><a href="#content-sutra" id="nav-sutra">经典</a></li>
+                    <li><a href="#content-backsong" id="nav-backsong">背景音乐</a></li>
+                    <li><a href="#content-game" id="nav-game">热门游戏</a></li>
+                    <li><a href="#content-lovesong" id="nav-lovesong">情歌</a></li>
+                </ul>
+            </div>
+            <!-- 推荐 -->
+                <ul id="content-tuijian" class="tab-t">
+                    <li><a href="" class="pic"><img src="./images/tab1.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab2.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab3.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab4.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab5.jpg"></a></li>
+                </ul>
+            <!-- 网络 -->
+                <ul id="content-netsong" class="tab-t">
+                    <li><a href="" class="pic"><img src="./images/tab21.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab22.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab23.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab24.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab25.jpg"></a></li>
+                </ul>
+            <!-- 经典 -->
+                <ul id="content-sutra" class="tab-t">
+                    <li><a href="" class="pic"><img src="./images/tab31.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab32.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab33.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab34.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab35.jpg"></a></li>
+                </ul>
+            <!-- 背景音乐 -->
+                <ul id="content-backsong" class="tab-backsong">
+                    <li><a href="" class="pic"><img src="./images/tab41.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab42.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab43.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab44.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab45.jpg"></a></li>
+                </ul>
+            <!-- 游戏 -->
+                <ul id="content-game" class="tab-game">
+                    <li><a href="" class="pic"><img src="./images/tab51.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab52.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab53.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab54.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab55.jpg"></a></li>
+                </ul>
+            <!-- 情歌 -->
+                <ul id="content-lovesong" class="tab-lovesong">
+                    <li><a href="" class="pic"><img src="./images/tab61.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab62.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab63.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab64.jpg"></a></li>
+                    <li><a href="" class="pic"><img src="./images/tab65.jpg"></a></li>
+                </ul>
+        
+        </div>
+    </div>
+    <script>
+        (function(){
+            var nav_tuijian = document.getElementById('nav-tuijian');
+            var nav_netsong = document.getElementById('nav-netsong');
+            var nav_sutra = document.getElementById('nav-sutra');
+            var nav_backsong = document.getElementById('nav-backsong');
+            var nav_game = document.getElementById('nav-game');
+            var nav_lovesong = document.getElementById('nav-lovesong');
+
+            var content_tuijian = document.getElementById('content-tuijian');
+            var content_netsong = document.getElementById('content-netsong');
+            var content_sutra = document.getElementById('content-sutra');
+            var content_backsong = document.getElementById('content-backsong');
+            var content_game = document.getElementById('content-game');
+            var content_lovesong = document.getElementById('content-lovesong');
+
+            nav_tuijian.className = 'active';
+
+            content_netsong.style.display = 'none';
+            content_sutra.style.display = 'none';
+            content_backsong.style.display = 'none';
+            content_game.style.display = 'none';
+            content_lovesong.style.display = 'none';
+
+            function hideAll(){
+                nav_tuijian.className = '';
+                nav_sutra.className = '';
+                nav_netsong.className = '';
+                nav_lovesong.className = '';
+                nav_game.className = '';
+                nav_backsong.className = '';
+
+                content_tuijian.style.display = 'none';
+                content_netsong.style.display = 'none';
+                content_sutra.style.display = 'none';
+                content_backsong.style.display = 'none';
+                content_game.style.display = 'none';
+                content_lovesong.style.display = 'none';
+            }
+            
+            nav_tuijian.onclick = function(){
+                hideAll();
+                nav_tuijian.className = 'active';
+                content_tuijian.style.display = 'block';
+            }
+            nav_sutra.onclick = function(){
+                hideAll();
+                nav_sutra.className = 'active';
+                content_sutra.style.display = 'block';
+            }
+            nav_netsong.onclick = function(){
+                hideAll();
+                nav_netsong.className = 'active';
+                content_netsong.style.display = 'block';
+            }
+            nav_lovesong.onclick = function(){
+                hideAll();
+                nav_lovesong.className = 'active';
+                content_lovesong.style.display ='block';
+            }
+            nav_game.onclick = function () {
+                hideAll();
+                nav_game.className = 'active';
+                content_game.style.display = 'block';
+            }
+            nav_backsong.onclick = function () {
+                hideAll();
+                nav_backsong.className = 'active';
+                content_backsong.style.display = 'block'; 
+            }
+        })();
+    </script>
+</body>
+</html>
